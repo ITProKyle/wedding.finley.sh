@@ -7,7 +7,9 @@ license = "Apache-2.0"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-runway = "^1.10.1"
+runway = "^1.10.1"  # TODO update when cfn lookup is released
+pyhcl = "^0.4.4"
+zipp = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 

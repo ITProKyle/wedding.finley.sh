@@ -1,0 +1,10 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+# this is needed to install runway pre-release with cfn lookup
+runway = {editable = true, git = "https://github.com/onicagroup/runway.git", ref = "cc08334"}
