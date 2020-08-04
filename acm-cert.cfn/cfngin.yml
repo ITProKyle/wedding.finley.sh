@@ -1,0 +1,20 @@
+namespace: ${namespace}
+cfngin_bucket: ''
+
+pre_build:
+  acm-cert:
+    path: runway.cfngin.hooks.acm.Certificate
+    required: true
+    args:
+      domain: ${domain_name}
+      hosted_zone_id: ${hosted_zone_id}
+      stack_name: ${namespace}-staticsite-acm-cert
+
+post_destroy:
+  acm-cert:
+    path: runway.cfngin.hooks.acm.Certificate
+    required: true
+    args:
+      domain: ${domain_name}
+      hosted_zone_id: ${hosted_zone_id}
+      stack_name: ${namespace}-staticsite-acm-cert

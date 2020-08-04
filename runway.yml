@@ -1,0 +1,32 @@
+future:
+  strict_environments: true
+
+deployments:
+  - modules:
+    - path: acm-cert.cfn
+      parameters:
+        domain_name: ${var domain_name.${env DEPLOY_ENVIRONMENT}}
+        hosted_zone_id: Z3D6E1DK2DV9J4
+    - path: staticsite.web
+      name: staticsite
+      type: static
+      parameters:
+        staticsite_acmcert_arn: ${cfn finley-wedding-${env DEPLOY_ENVIRONMENT}-staticsite-acm-cert.CertificateArn}
+        staticsite_aliases: ${var domain_name.${env DEPLOY_ENVIRONMENT}}
+      options:
+        build_output: build
+        build_steps:
+          - npm install
+          - npm run build
+    environments:
+      dev: 157766344080/us-east-1
+      prod: 157766344080/us-east-1
+    parameters:
+      namespace: finley-wedding-${env DEPLOY_ENVIRONMENT}
+    regions:
+      - us-east-1
+
+variables:
+  domain_name:
+    dev: wedding.dev.finley.sh
+    prod: wedding.finley.sh
