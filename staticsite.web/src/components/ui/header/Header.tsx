@@ -37,7 +37,6 @@ const Header: React.FC<Props> = ({ header, setActiveNavItem }: Props): JSX.Eleme
   return (
     <React.Fragment>
       <Menu
-        stackable
         pointing
         size='small'
         className='site'
