@@ -1,0 +1,17 @@
+.ui.menu .item:focus {
+  outline: none;
+}
+
+.ui.menu .item::-moz-focus-inner {
+  border: 0;
+}
+
+.ui.menu .item.logout {
+  background: #edbcb9;
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+
+.ui.menu.inverted .item.logout {
+  background: red;
+  color: white;
+}

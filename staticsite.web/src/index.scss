@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+.ui .ui.header {
+  font-family: 'Fira Code', 'Courier New', 'Ubuntu';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
