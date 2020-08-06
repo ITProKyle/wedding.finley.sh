@@ -2,8 +2,9 @@
   padding: 40px 20px;
 }
 
-.container.page .ui.huge.page-title {
+.container.page .ui.page-title.home.subheader {
   font-size: 3em;
+  font-size: clamp(0.895rem, 2.2vw, 27.5px);
   padding-bottom: 15px;
   margin-bottom: 50px;
 }
