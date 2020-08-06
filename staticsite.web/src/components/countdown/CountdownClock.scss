@@ -145,13 +145,13 @@ $borderRadius: 0.15em;
       margin: 0 0.2em;
       .flip-countdown-title {
         font-size: 32px;
-        font-size: clamp(0.9rem, 2.65vw, 32px)
+        font-size: clamp(0.5rem, 2.65vw, 32px)
       }
       .flip-countdown-card {
         .flip-countdown-card-sec {
           margin: 0 0.025em;
           font-size: 96px;
-          font-size: clamp(3.1rem, 7.75vw, 96px)
+          font-size: clamp(2rem, 7.95vw, 96px)
         }
       }
     }
