@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
-import { Container, Header } from 'semantic-ui-react';
+import { Card, Container, Divider, Header } from 'semantic-ui-react';
 import 'src/components/staticPages/HomePage.scss';
 import { ThemeContext } from 'src/context/ThemeContext';
 import CountdownClock from 'src/components/countdown/CountdownClock';
+import AmazonWeddingRegistry from 'src/components/gifts/amazon';
+import PayPalMe from 'src/components/gifts/paypal';
 
 const HomePage: React.FC = () : JSX.Element => {
   const { theme, settings } = useContext(ThemeContext);
@@ -29,6 +31,18 @@ const HomePage: React.FC = () : JSX.Element => {
       >
         More info will be provided here closer to the date
       </Header>
+      <Divider inverted={theme === 'dark'} />
+      <Header
+        inverted={theme === 'dark'}
+        size='large'
+        textAlign='center'
+      >
+        Gifts
+      </Header>
+      <Card.Group centered={true}>
+        <PayPalMe />
+        <AmazonWeddingRegistry />
+      </Card.Group>
     </Container>
   )
 }

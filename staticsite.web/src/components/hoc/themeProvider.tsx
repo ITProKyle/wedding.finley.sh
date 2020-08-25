@@ -18,11 +18,11 @@ const settings: { dark: {}, light: {} } = {
 
 export const ThemeProvider: React.FC = ({ children }): JSX.Element => {
   const [theme, setTheme] = useState<'dark' | 'light'>(
-    (localStorage.getItem('us.theme') as 'light' | 'dark') || 'dark'
+    (localStorage.getItem('us.theme') as 'light' | 'dark') || 'light'
   );
 
   const toggleTheme = (): void => {
-    const val = theme === 'dark' ? 'light' : 'dark';
+    const val = theme === 'dark' ? 'light' : 'light';
     setTheme(val);
     localStorage.setItem('ui.theme', val);
   };
