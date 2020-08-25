@@ -22,7 +22,7 @@ export const ThemeProvider: React.FC = ({ children }): JSX.Element => {
   );
 
   const toggleTheme = (): void => {
-    const val = theme === 'dark' ? 'light' : 'light';
+    const val = theme === 'dark' ? 'light' : 'dark';
     setTheme(val);
     localStorage.setItem('ui.theme', val);
   };
