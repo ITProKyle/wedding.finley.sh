@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { connect } from 'react-redux';
 import { Route, Router, Switch } from 'react-router-dom';
 import { compose } from 'redux';
-import { Container, Segment } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 import 'src/components/App.scss';
 import Footer from 'src/components/ui/footer/Footer';
 import Header from 'src/components/ui/header/Header';
@@ -21,11 +21,12 @@ const App = () => {
       <Router history={history} data-test='site-router'>
         <Container
           className={`site ${theme}`}
-          style={{ background: settings.background, color: settings.fontColor }}
+          style={{ background: settings.background, color: settings.fontColor, position: 'relative'}}
           data-test='site-container'
         >
           <Header data-test='site-header' />
-          <Segment basic>
+
+          <Container className='page-content'>
             <Switch>
               {/* Static */}
               <Route
@@ -41,7 +42,8 @@ const App = () => {
                 data-test='root-route'
               />
             </Switch>
-          </Segment>
+          </Container>
+
           <Footer />
         </Container>
       </Router>

@@ -4,13 +4,12 @@ $color-bg-container: #f0f0f0;
 $color-bg-dark-container: #222222;
 
 #footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
 
 .footer.ui.segment {
-  height: 1px;
 
   &.dark {
     background: lighten( $color-bg-dark-container, 3%) !important;
