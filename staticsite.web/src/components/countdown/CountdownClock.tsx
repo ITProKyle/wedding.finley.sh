@@ -75,6 +75,7 @@ const CountdownClock: React.FC<Props> = (props): JSX.Element => {
 
   useEffect(() => {
     processClock();
+    // eslint-disable-next-line
     interval = setInterval(() => {
       processClock();
     }, 1000);

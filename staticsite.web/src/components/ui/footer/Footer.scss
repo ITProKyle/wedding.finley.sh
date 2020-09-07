@@ -1,0 +1,22 @@
+// Colors
+$color-bg-container: #f0f0f0;
+
+$color-bg-dark-container: #222222;
+
+#footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer.ui.segment {
+  height: 1px;
+
+  &.dark {
+    background: lighten( $color-bg-dark-container, 3%) !important;
+  }
+
+  &.light {
+    background: darken( $color-bg-container, 3% ) !important;
+  }
+}

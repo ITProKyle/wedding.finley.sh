@@ -1,7 +1,10 @@
 // Colors
 $bg-color: #ccc;
+$bg-color-container: #f0f0f0;
 $dot-color: #444;
+
 $bg-color-dark: #444;
+$bg-color-dark-container: #222222;
 $dot-color-dark: #ccc;
 
 // Dimensions
@@ -9,7 +12,8 @@ $dot-size: 1px;
 $dot-space: 22px;
 
 .site-wrapper {
-  min-height: 100%;
+  min-height: 100vh;
+  position: relative;
 
   &.light {
     background: linear-gradient(
@@ -34,7 +38,7 @@ $dot-space: 22px;
   min-height: 100%;
   padding: 0px;
   position: relative;
-  background: #f0f0f0;
+  background: $bg-color-container;
   min-height: 100vh;
   height: 100%;
 }
@@ -77,9 +81,9 @@ $dot-space: 22px;
 
 .ui.buttons.dark .or::before {
   background: #1b1c1d;
-  color: #f0f0f0;
+  color: $bg-color-container;
 }
 
 .dark .ui.header .sub.header {
-  color: #f0f0f0;
+  color: $bg-color-container;
 }

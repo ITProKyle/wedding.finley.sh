@@ -42,7 +42,7 @@ const Header: React.FC<Props> = ({ header, setActiveNavItem }: Props): JSX.Eleme
         data-test='site-menu'
         inverted={theme === 'dark'}
       >
-        {/* About */}
+        {/* Home */}
         <Menu.Item
           as={Link}
           name='home'
@@ -52,6 +52,17 @@ const Header: React.FC<Props> = ({ header, setActiveNavItem }: Props): JSX.Eleme
           data-test='menu-item-home'
         >
           Home
+        </Menu.Item>
+        {/* Our Story */}
+        <Menu.Item
+          as={Link}
+          name='our-story'
+          to='/our-story'
+          active={header.active === '/our-story'}
+          className='our-story'
+          data-test='menu-item-our-story'
+        >
+          Our Story
         </Menu.Item>
         {/* Theme toggle */}
         <Menu.Item
