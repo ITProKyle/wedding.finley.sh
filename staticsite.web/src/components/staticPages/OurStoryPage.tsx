@@ -65,6 +65,7 @@ const OurStoryPage: React.FC = () : JSX.Element => {
 
         <Grid.Row columns={1}>
           <Grid.Column>
+            <Image floated='left' size='medium' src='/our-story-together.jpg'/>
             <p>
               Kyle and Nicole didn’t meet in a typical office environment, they met working in a laser tag arena that was converted into a haunted house that Kyle himself helped construct.
               It was chance.
