@@ -22,15 +22,6 @@ const HomePage: React.FC = () : JSX.Element => {
         hideSecond={false}
         titlePosition='top'
       />
-      <Header
-        className='page-title home subheader'
-        inverted={theme === 'dark'}
-        size='large'
-        style={{ color: settings.fontColor }}
-        textAlign='center'
-      >
-        More info will be provided here closer to the date
-      </Header>
 
       <Grid centered className='add-to-calendar' textAlign='center'>
         <Grid.Row centered columns={2}>
@@ -38,6 +29,7 @@ const HomePage: React.FC = () : JSX.Element => {
             <Header style={{ color: settings.fontColor }}>
               Ceremony
             </Header>
+            <p>10/10/2020 @ 10:20am PT</p>
             <Button
               icon
               inverted={theme === 'dark'}
@@ -55,6 +47,7 @@ const HomePage: React.FC = () : JSX.Element => {
             <Header style={{ color: settings.fontColor }}>
               Reception
             </Header>
+            <p>10/10/2020 @ TBD</p>
             <Button
               disabled
               icon
