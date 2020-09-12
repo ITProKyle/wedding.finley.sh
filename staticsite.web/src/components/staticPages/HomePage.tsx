@@ -15,7 +15,7 @@ const HomePage: React.FC = () : JSX.Element => {
         size='large'
         endAt={'2020-10-10 10:20:00'}
         hideYear={true}
-        hideMonth={false}
+        hideMonth={true}
         hideDay={false}
         hideHour={false}
         hideMinute={false}
