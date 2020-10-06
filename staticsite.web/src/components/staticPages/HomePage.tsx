@@ -47,15 +47,14 @@ const HomePage: React.FC = () : JSX.Element => {
             <Header style={{ color: settings.fontColor }}>
               Reception
             </Header>
-            <p>10/10/2020 @ TBD</p>
+            <p>10/10/2020 @ 11:30am PT</p>
             <Button
-              disabled
               icon
               inverted={theme === 'dark'}
               labelPosition='left'
               onClick={event => {
                 event.preventDefault();
-                window.open('#')
+                window.open('https://evt.to/iaeaahsw')
               }}
             >
               <Icon name='calendar alternate outline'/>
