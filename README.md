@@ -2,7 +2,7 @@
 
 **Development Site:** [https://wedding.dev.finley.sh](https://wedding.dev.finley.sh)
 
-**Production Site:** [https://wedding.dev.finley.sh](https://wedding.dev.finley.sh)
+**Production Site:** [https://weddingfinley.sh](https://wedding.finley.sh)
 
 ## Usage
 
