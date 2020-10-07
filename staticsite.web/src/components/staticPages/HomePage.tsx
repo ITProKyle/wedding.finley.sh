@@ -39,6 +39,20 @@ const HomePage: React.FC = () : JSX.Element => {
     </Container>
 
       <Grid centered className='add-to-calendar' textAlign='center'>
+        <Grid.Row centered columns={1}>
+          <Button
+            icon
+            inverted={theme === 'dark'}
+            labelPosition='left'
+            onClick={event => {
+              event.preventDefault();
+              window.open('https://forms.gle/Hj4ufvKWo27m8baCA ')
+            }}
+          >
+            <Icon name='book'/>
+            Sign Virtual Guest Book
+          </Button>
+        </Grid.Row>
         <Grid.Row centered columns={2}>
           <Grid.Column textAlign='center'>
             <Header style={{ color: settings.fontColor }}>
