@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Card, Container, Divider, Grid, Header, Icon } from 'semantic-ui-react';
+import { Button, Card, Container, Divider, Grid, Header, Icon, Message } from 'semantic-ui-react';
 import 'src/components/staticPages/HomePage.scss';
 import { ThemeContext } from 'src/context/ThemeContext';
 import CountdownClock from 'src/components/countdown/CountdownClock';
@@ -22,6 +22,14 @@ const HomePage: React.FC = () : JSX.Element => {
         hideSecond={false}
         titlePosition='top'
       />
+
+    <Message icon color='red'>
+      <Icon name='youtube'/>
+      <Message.Content>
+        <Message.Header>Watch the ceremony here or on YouTube</Message.Header>
+        <p>To engage in chat during the stream, watch from YouTube using the button provided below under <b>Ceremony</b>.</p>
+      </Message.Content>
+    </Message>
 
     <Container
       className="auto-resizable-iframe"
@@ -70,6 +78,22 @@ const HomePage: React.FC = () : JSX.Element => {
             >
               <Icon name='calendar alternate outline'/>
               Add to Calendar
+            </Button>
+
+            <br />
+            <br />
+
+            <Button
+              icon
+              inverted={theme === 'dark'}
+              labelPosition='left'
+              onClick={event => {
+                event.preventDefault();
+                window.open('https://youtu.be/jAKIt2olS3k')
+              }}
+            >
+              <Icon name='youtube'/>
+              Watch Now
             </Button>
           </Grid.Column>
           <Grid.Column textAlign='center'>
