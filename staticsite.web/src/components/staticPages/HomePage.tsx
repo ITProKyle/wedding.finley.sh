@@ -6,6 +6,9 @@ import CountdownClock from 'src/components/countdown/CountdownClock';
 import AmazonWeddingRegistry from 'src/components/gifts/amazon';
 import PayPalMe from 'src/components/gifts/paypal';
 
+const Today = Date.now()
+const WeddingDay = new Date("2020-10-10");
+
 const HomePage: React.FC = () : JSX.Element => {
   const { theme, settings } = useContext(ThemeContext);
 
@@ -85,6 +88,7 @@ const HomePage: React.FC = () : JSX.Element => {
 
             <Button
               icon
+              disabled={WeddingDay.getTime() >= Today}
               inverted={theme === 'dark'}
               labelPosition='left'
               onClick={event => {
@@ -119,6 +123,7 @@ const HomePage: React.FC = () : JSX.Element => {
 
             <Button
               icon
+              disabled={WeddingDay.getTime() >= Today}
               inverted={theme === 'dark'}
               labelPosition='left'
               onClick={event => {
