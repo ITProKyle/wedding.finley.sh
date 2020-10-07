@@ -113,6 +113,22 @@ const HomePage: React.FC = () : JSX.Element => {
               <Icon name='calendar alternate outline'/>
               Add to Calendar
             </Button>
+
+            <br />
+            <br />
+
+            <Button
+              icon
+              inverted={theme === 'dark'}
+              labelPosition='left'
+              onClick={event => {
+                event.preventDefault();
+                window.open('https://rackspace.zoom.us/j/92574082346')
+              }}
+            >
+              <Icon name='video camera'/>
+              Join Now
+            </Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>
