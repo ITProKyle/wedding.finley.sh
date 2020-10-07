@@ -23,6 +23,21 @@ const HomePage: React.FC = () : JSX.Element => {
         titlePosition='top'
       />
 
+    <Container
+      className="auto-resizable-iframe"
+      style={{paddingBottom: "20px"}}
+      textAlign="center"
+    >
+      <iframe
+        title="Wedding live stream"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        frameBorder="0"
+        src="https://www.youtube.com/embed/jAKIt2olS3k"
+      >
+      </iframe>
+    </Container>
+
       <Grid centered className='add-to-calendar' textAlign='center'>
         <Grid.Row centered columns={2}>
           <Grid.Column textAlign='center'>
